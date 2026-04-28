@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.julian_n</groupId>
     <artifactId>objetosServicio_00000279037</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +14,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Julianwn/objetosservicio_00000279037</url>
+            <url>https://maven.pkg.github.com/Julianwn/objetosServicio_00000279037</url>
         </repository>
     </distributionManagement>
 </project>
