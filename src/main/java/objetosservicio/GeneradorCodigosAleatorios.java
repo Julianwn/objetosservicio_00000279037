@@ -33,19 +33,21 @@ public class GeneradorCodigosAleatorios extends GeneradorCodigos {
     private final Map <Integer, Integer> MAPA;
     
     /**
-     * Constructor que inicializa el generador con un prefijo específico.
+     * Constructor que inicializa el generador con un prefijo y rango específico.
      *
      * @param prefijo Prefijo que tendrán los códigos generados.
+     * @param min Numero minimo donde inician los codigos generados.
+     * @param disponibles Cantidad de numeros generables entre el numero minimo y el maximo.
      */
-    public GeneradorCodigosAleatorios(String prefijo) {
+    public GeneradorCodigosAleatorios(String prefijo, int min, int disponibles) {
         super(prefijo);
-        this.MIN = 1;
-        this.disponibles = 9999;
+        this.MIN = min;
+        this.disponibles = disponibles;
         this.TAMANIO = String.valueOf(this.disponibles).length();
         this.RAND = new Random();
         this.MAPA = new HashMap<>();
     }
-    
+
     /**
      * Verifica si un código cumple con el formato válido esperado:
      *     PREFIJO-XXXX
