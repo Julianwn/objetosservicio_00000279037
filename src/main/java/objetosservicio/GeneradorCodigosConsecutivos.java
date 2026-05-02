@@ -10,15 +10,27 @@ public class GeneradorCodigosConsecutivos extends GeneradorCodigos {
     /**
      * Valor actual del consecutivo utilizado para generar los códigos.
      */
-    private int consecutivo = 0;
+    private int consecutivo;
     
     /**
-     * Constructor que inicializa el generador con un prefijo específico.
+     * Constructor que inicializa con un prefijo específico y el consecutivo en 1.
      *
-     * @param prefijo Prefijo que tendrán los códigos generados.
+     * @param prefijo Prefijo que tendrán todos los códigos generados.
      */
     public GeneradorCodigosConsecutivos(String prefijo) {
         super(prefijo);
+        this.consecutivo = 1;
+    }
+    
+    /**
+     * Constructor que inizializa con un prefijo especifico y un consecutivo inicial.
+     * 
+     * @param prefijo Prefijo que tendrán todos los codigos generados.
+     * @param consecutivo Consecutivo inicial numerico.
+     */
+    public GeneradorCodigosConsecutivos(String prefijo, int consecutivo) {
+        super(prefijo);
+        this.consecutivo = consecutivo;
     }
     
     /**
@@ -45,11 +57,11 @@ public class GeneradorCodigosConsecutivos extends GeneradorCodigos {
     }
     
     /**
-     * Incrementa el valor del consecutivo y devuelve el nuevo valor.
+     * Devuelve el numero del consecutivo y lo incrementa en uno.
      *
-     * @return Valor consecutivo después del incremento.
+     * @return Valor consecutivo antes del incremento.
      */
     private int incrementarConsecutivo() {
-         return ++this.consecutivo;
+         return this.consecutivo++;
     }
 }
